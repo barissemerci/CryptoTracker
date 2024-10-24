@@ -1,4 +1,4 @@
-package com.barissemerci.cryptotracker.util
+package com.barissemerci.cryptotracker.core.presentation.util
 
 import com.barissemerci.cryptotracker.R
 

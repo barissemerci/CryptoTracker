@@ -1,4 +1,4 @@
-package com.barissemerci.cryptotracker.util
+package com.barissemerci.cryptotracker.core.domain.util
 
 typealias DomainError = Error
 
