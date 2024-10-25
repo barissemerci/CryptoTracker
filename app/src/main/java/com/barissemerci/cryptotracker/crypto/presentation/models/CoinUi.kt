@@ -2,8 +2,8 @@ package com.barissemerci.cryptotracker.crypto.presentation.models
 
 
 import androidx.annotation.DrawableRes
-import com.barissemerci.cryptotracker.crypto.domain.Coin
 import com.barissemerci.cryptotracker.core.presentation.util.getDrawableIdForCoin
+import com.barissemerci.cryptotracker.crypto.domain.Coin
 import java.text.NumberFormat
 import java.util.Locale
 

@@ -18,12 +18,14 @@ import androidx.compose.ui.unit.dp
 import com.barissemerci.cryptotracker.crypto.presentation.coin_list.components.CoinListItem
 import com.barissemerci.cryptotracker.crypto.presentation.coin_list.components.previewCoin
 import com.barissemerci.cryptotracker.ui.theme.CryptoTrackerTheme
+import kotlinx.coroutines.flow.Flow
 
 @Composable
 fun CoinListScreen(
     state: CoinListState,
     modifier: Modifier = Modifier
 ) {
+
     if (state.isLoading) {
         Box(modifier = modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
             CircularProgressIndicator()
