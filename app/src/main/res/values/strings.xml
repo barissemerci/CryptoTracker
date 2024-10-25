@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">CryptoTracker</string>
+    <string name="request_timeout">The request timed out.</string>
+    <string name="too_many_requests">Oops, it seems like your quota is exceed.</string>
+    <string name="no_internet">Could\'n connect to server, please check your internet connection.</string>
+    <string name="error_unknown">Something went wrong, please try again later.</string>
+    <string name="serialization">Couldn\'t serialize or deserialize data.</string>
 </resources>
