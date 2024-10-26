@@ -18,18 +18,17 @@ import androidx.compose.ui.unit.dp
 import com.barissemerci.cryptotracker.crypto.presentation.coin_list.components.CoinListItem
 import com.barissemerci.cryptotracker.crypto.presentation.coin_list.components.previewCoin
 import com.barissemerci.cryptotracker.ui.theme.CryptoTrackerTheme
-import kotlinx.coroutines.flow.Flow
 
 @Composable
 fun CoinListScreen(
     state: CoinListState,
+    onAction: (CoinListAction) -> Unit,
     modifier: Modifier = Modifier
 ) {
 
     if (state.isLoading) {
         Box(modifier = modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
             CircularProgressIndicator()
-
         }
     } else {
         LazyColumn(
@@ -39,7 +38,7 @@ fun CoinListScreen(
             items(state.coins) { coinUi ->
                 CoinListItem(
                     coinUi = coinUi,
-                    onClick = { /*TODO*/ },
+                    onClick = { onAction(CoinListAction.OnCoinClick(coinUi)) },
                     modifier = Modifier.fillMaxWidth()
                 )
                 HorizontalDivider()
@@ -61,6 +60,7 @@ private fun CoinListScreenPreview() {
                     previewCoin.copy(id = it.toString())
                 }
             ),
+            onAction = {},
             modifier = Modifier.background(MaterialTheme.colorScheme.background)
         )
     }
